@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8"/>
-    <title>pinkylam 主页</title>
+    <title>文章列表</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description" content=""/>
     <meta name="author" content=""/>
@@ -145,7 +145,7 @@
                             </a>
                         </li>
                         <li>
-                            <a class="tooltip-tip ajax-load" href="/article/index" title="文章列表">
+                            <a class="tooltip-tip ajax-load" href="/article/index" title="文章管理">
                                 <i class="fontawesome-list-ul"></i>
                                 <span>文章列表</span>
                             </a>
@@ -259,7 +259,6 @@
                     <div class="col-lg-7" style="margin-left: 55px;">
                         <div class="tittle-middle-header">
                             <div class="alert">
-                               <!--  <button type="button" class="close" data-dismiss="alert">×</button> -->
                                 <span class="tittle-alert entypo-info-circled"></span>&nbsp;欢迎回来,&nbsp;
                                 <strong><span th:text="${session.user.name}"></span>!</strong>&nbsp;&nbsp;你上次登录时间：2017-06-09 16:54
                             </div>
@@ -273,84 +272,21 @@
                 <li><i class="fa fa-lg fa-angle-right"></i></li>
                 <li><a href="#" title="Sample page 1">首页</a></li>
                 <li><i class="fa fa-lg fa-angle-right"></i></li>
-                <li><a href="#" title="Sample page 1">我的面板</a></li>
+                <li><a href="#" title="Sample page 1">文章管理</a></li>
+                <li><i class="fa fa-lg fa-angle-right"></i></li>
+                <li><a href="#" title="Sample page 1">文章列表</a></li>
             </ul>
 
             <div class="content-wrap">
                 <div class="row">
-                    <div class="col-lg-3">
-                        <div class="profit" id="profitClose">
-                            <div class="headline ">
-                                <h3>
-                                    <span><i class="maki-ferry"></i>&#160;&#160;文章数量</span>
-                                </h3>
-                            </div>
-                            <div class="value">
-                                 59
-                            </div>
-                            <div class="profit-line">
-                                                                                               目前您已经写了59篇文章了，继续努力！
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-lg-3">
-                        <div class="revenue" id="revenueClose">
-                            <div class="headline ">
-                                <h3>
-                                    <span><i class="maki-aboveground-rail"></i>&#160;&#160;累计写作时间</span>
-                                </h3>
-                            </div>
-                            <div class="value">
-                               5.5
-                            </div>
-                            <div class="profit-line">
-                                                                                                目前您已累计写作时间为5.5个小时，继续加油！
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-lg-3">
-                        <div class="order" id="orderClose">
-                            <div class="headline ">
-                                <h3>
-                                    <span><i class="maki-airport"></i>&#160;&#160;文件资源</span>
-                                </h3>
-                            </div>
-                            <div class="value">
-                                26
-                            </div>
-                            <div class="profit-line">
-                               	目前您已上传26个资源文件。
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="col-lg-3">
-                        <div class=" member" id="memberClose">
-                            <div class="headline ">
-                                <h3>
-                                    <span><i class="fa fa-truck"></i>&#160;&#160;累计评论</span>
-                                </h3>
-                            </div>
-                            <div class="value">
-                               45
-                            </div>
-                            <div class="profit-line">
-                            	目前已累计45条评论数据。
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="content-wrap">
-                <div class="row">
-                    <div class="col-lg-8">
+                    <div class="col-lg-12">
+                    <br/>
+                	<button type="button" class="btn btn-primary">
+                                    <span class="entypo-plus-squared"></span>&nbsp;&nbsp;新增文章</button>
                         <div id="siteClose" class="nest">
                             <div class="title-alt">
                                 <h6>
-                                    <span class="fontawesome-truck"></span>&nbsp;操作日志</h6>
+                                    <span class="fontawesome-truck"></span>&nbsp;文章列表</h6>
                                 <div class="titleToggle">
                                     <a class="nav-toggle-alt" href="#site">
                                         <span class="entypo-up-open"></span>
@@ -362,66 +298,53 @@
                                     <table class="table">
                                         <thead>
                                             <tr>
-                                                <th>操作内容</th>
-                                                <th>操作日期</th>
+                                                <th>文章名称</th>
+                                                <th>创作日期</th>
+                                                <th>修改日期</th>
+                                                <th>状态</th>
+                                                <th>操作</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
                                                 <td class="armada-devider">删除了thymeleaf 学习笔记</td>
                                                 <td class="armada-devider">2017-06-09</td>
+                                                <td class="armada-devider">2017-06-09</td>
+                                                <td class="armada-devider">草稿</td>
+                                                <td class="armada-devider">
+													<button type="button" class="btn btn-default"><span class="entypo-pencil"></span>&nbsp;&nbsp;Edit</button>
+												</td>
                                             </tr>
                                             <tr>
                                                 <td class="armada-devider">pinky lam登录系统</td>
                                                 <td class="armada-devider">2017-06-09</td>
+                                                <td class="armada-devider">2017-06-09</td>
+                                                <td class="armada-devider">草稿</td>
+                                                <td class="armada-devider">
+													<button type="button" class="btn btn-default"><span class="entypo-pencil"></span>&nbsp;&nbsp;Edit</button>
+												</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="armada-devider">pinky lam登录系统</td>
+                                                <td class="armada-devider">2017-06-09</td>
+                                                <td class="armada-devider">2017-06-09</td>
+                                                <td class="armada-devider">草稿</td>
+                                                <td class="armada-devider">
+													<button type="button" class="btn btn-default"><span class="entypo-pencil"></span>&nbsp;&nbsp;Edit</button>
+												</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="armada-devider">pinky lam登录系统</td>
+                                                <td class="armada-devider">2017-06-09</td>
+                                                <td class="armada-devider">2017-06-09</td>
+                                                <td class="armada-devider">草稿</td>
+                                                <td class="armada-devider">
+													<button type="button" class="btn btn-default"><span class="entypo-pencil"></span>&nbsp;&nbsp;Edit</button>
+												</td>
                                             </tr>
                                         </tbody>
                                     </table>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div id="RealTimeClose" class="nest">
-                            <div class="title-alt">
-                                <h6>
-                                    <span class="fontawesome-resize-horizontal"></span>&nbsp;最新评论</h6>
-	                                <div class="titleToggle">
-	                                    <a class="nav-toggle-alt" href="#RealTime">
-	                                        <span class="entypo-up-open"></span>
-	                                    </a>
-	                                </div>
-                            </div>
-                            <div id="RealTime" style="min-height:296px;padding-top:20px;" class="body-nest">
-                                <ul class="direction">
-                                    <li>
-                                        <span class="direction-icon maki-fuel" style="background:#FF6B6B"></span>
-                                        <h3>
-                                            <span>thymeleaf 学习笔记</span>
-                                        </h3>
-                                        <p>共有26条评论。</p>
-                                        <p><i class="fa fa-clock-o"></i>&nbsp;&nbsp;2017-06-09 12:25:45</p>
-                                    </li>
-                                    <li class="divider"></li>
-                                    <li>
-                                        <span class="direction-icon maki-fast-food" style="background:#65C3DF"></span>
-                                        <h3>
-                                            <span>thymeleaf 学习笔记</span>
-                                        </h3>
-                                        <p>共有26条评论。</p>
-                                        <p><i class="fa fa-clock-o"></i>&nbsp;&nbsp;2017-06-09 12:25:45</p>
-                                    </li>
-                                    <li class="divider"></li>
-                                    <li>
-                                        <span class="direction-icon maki-giraffe" style="background:#45B6B0"></span>
-                                        <h3>
-                                            <span>thymeleaf 学习笔记</span>
-                                        </h3>
-                                        <p>共有26条评论。</p>
-                                        <p><i class="fa fa-clock-o"></i>&nbsp;&nbsp;2017-06-09 12:25:45</p>
-                                    </li>
-                                    <li class="divider"></li>
-                                </ul>
                             </div>
                         </div>
                     </div>
