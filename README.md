@@ -7,7 +7,6 @@
 - spring data jpa
 - mysql
 - jquery,layer,bootstrap
-- 
 
 ## 更新日志
 
@@ -20,12 +19,5 @@
 
 ![登录界面](https://github.com/handexing/oh-pinkylam/raw/master/img/login.png)
 
-### 系统首页
-
-![登录界面](https://github.com/handexing/oh-pinkylam/raw/master/img/index.png)
-
-### 文章列表界面
-
-![登录界面](https://github.com/handexing/oh-pinkylam/raw/master/img/articleList.png)
 
 > 觉得不错的朋友可以点下star,watch,fork也算是对我的鼓励了。
