@@ -40,6 +40,19 @@ public class User {
 	@JsonSerialize(using = CustomDateSerializer.class)
 	private Date updateTime;
 
+	@Column(name = "HOME_URL")
+	private String homeUrl;
+	@Column(name = "ACTIVATED")
+	private Integer activated;
+	@Column(name = "LOGGED")
+	private Integer logged;
+	@Column(name = "GROUP_NAME")
+	private String groupName;
+
+	public Integer getActivated() {
+		return activated;
+	}
+
 	public Date getCreateTime() {
 		return createTime;
 	}
@@ -48,8 +61,20 @@ public class User {
 		return email;
 	}
 
+	public String getGroupName() {
+		return groupName;
+	}
+
+	public String getHomeUrl() {
+		return homeUrl;
+	}
+
 	public Long getId() {
 		return id;
+	}
+
+	public Integer getLogged() {
+		return logged;
 	}
 
 	public String getName() {
@@ -68,6 +93,10 @@ public class User {
 		return updateTime;
 	}
 
+	public void setActivated(Integer activated) {
+		this.activated = activated;
+	}
+
 	public void setCreateTime(Date createTime) {
 		this.createTime = createTime;
 	}
@@ -76,8 +105,20 @@ public class User {
 		this.email = email;
 	}
 
+	public void setGroupName(String groupName) {
+		this.groupName = groupName;
+	}
+
+	public void setHomeUrl(String homeUrl) {
+		this.homeUrl = homeUrl;
+	}
+
 	public void setId(Long id) {
 		this.id = id;
+	}
+
+	public void setLogged(Integer logged) {
+		this.logged = logged;
 	}
 
 	public void setName(String name) {
